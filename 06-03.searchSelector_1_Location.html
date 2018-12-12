@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script>
+      $(function(){
+        $("#menu_1 li:first").css({"background-color" : "#ff0"});
+        $("#menu_1 li:last").css({"background-color" : "#0ff"});
+
+        $("#menu_2 li:odd").css({"background-color" : "#ff0"});
+        $("#menu_2 li:even").css({"background-color" : "#0ff"});
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Search Selector :: First / Last</h1>
+    <ul id="menu_1">
+      <li>Contents_1-1</li>
+      <li>Contents_1-2</li>
+      <li>Contents_1-3</li>
+      <li>Contents_1-4</li>
+      <li>Contents_1-5</li>
+    </ul>
+
+    <h1>Search Selector :: Odd / Even</h1>
+    <ul id="menu_2">
+      <li>Contents_1-1</li>
+      <li>Contents_1-2</li>
+      <li>Contents_1-3</li>
+      <li>Contents_1-4</li>
+      <li>Contents_1-5</li>
+    </ul>
+  </body>
+</html>

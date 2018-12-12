@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en" dir="ltr">
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      var userEmail = prompt("Your E-mail Address ?", "");
+      var arrUrl = [".com", ".co.kr", ".net", ".go.kr", ".or.kr"];
+      var check1 = false;
+      var check2 = false;
+
+      if (userEmail.indexOf("@")>0) {
+        check1 = true;
+      }
+
+      for (var i=0;i<arrUrl.length;i++) {
+        if (userEmail.indexOf(arrUrl[i])>0){
+          check2 = true;
+        }
+      }
+
+      if (check1 && check2) {
+        document.write(userEmail);
+      } else {
+        alert("E-mail type fail");
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

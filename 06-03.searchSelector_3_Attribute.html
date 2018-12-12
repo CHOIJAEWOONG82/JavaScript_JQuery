@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script>
+      $(function(){
+        $("#wrap a[target]").css({"color":"#f00"});
+        $("#wrap a[href^=https]").css({"color":"#0f0"});
+        $("#wrap a[hef$=net]").css({"color":"#00f"});
+        $("#wrap a[href*=google]").css({"color":"#000"});
+        $("#member_f:text").css({"background-color":"#ff0"});
+        $("#member_f:password").css({"background-color":"#0ff"});
+
+        $("#wrap_2 p:hidden").css({"display":"block","background":"#ff0"});
+        var z1=$("#zone_1 :selected").val();
+        console.log(z1);
+        var z2=$("#zone_2 :checked").val();
+        console.log(z2);
+        var z3=$("#zone_3 :checked").val();
+        console.log(z3);
+      });
+    </script>
+  </head>
+  <body>
+// Attribute Value =============================================================
+    <div id="wrap_1">
+      <p><a href="http://easyspub.co.kr" target="_blank">EasysPub</a></p>
+      <p><a href="https://www.naver.com">NAVER</a></p>
+      <p><a href="http://www.daum.net">DAUM</a></p>
+      <p><a href="http://www.google.com">GOOGLE</a></p>
+    </div>
+    <form action="#" method="get" id="member_f">
+      <p><label for="user_ID">ID : </label><input type="text" name="user_ID" id="user_ID"></p>
+      <p><label for="user_PW">PW : </label><input type="password" name="user_PW" id="user_PW"></p>
+    </form>
+// Attribute State =============================================================
+    <div id="wrap_2">
+      <p>Contents_1</p>
+      <p style="display:none">Contents_2</p>
+      <p>Contents_3</p>
+    </div>
+    <form action="#">
+      <p id="zone_1">
+        <select id="course" name="course">
+          <option value="opt_1">Option_1</option>
+          <option value="opt_2" selected>Option_2</option>
+          <option value="opt_3">Option_3</option>
+        </select>
+      </p>
+      <p id="zone_2">
+        <input type="checkbox" name="hobby_1" value="readBook">ReadBook
+        <input type="checkbox" name="hobby_2" value="bicycle">Bicycle
+        <input type="checkbox" name="hobby_3" value="climbing" checked>Climbing
+      </p>
+      <p id="zone_3">
+        <input type="radio" name="gender" value="male">Men
+        <input type="radio" name="gender" value="female" checked>Women
+      </p>
+    </form>
+  </body>
+</html>

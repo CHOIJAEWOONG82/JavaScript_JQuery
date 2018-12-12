@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script>
+    var addNum=0;
+    var subNum=1000;
+
+    var auto_1=setInterval (function() {
+      addNum++;
+      console.log("addNum : " + addNum);
+    },3000);
+
+    var auto_2=setInterval(function() {
+      subNum--;
+      console.log("subNum : " + subNum);
+    },3000)
+  </script>
+  <body>
+    <button onclick="clearInterval(auto_1)">Up Stop<//button>
+    <button onclick="clearInterval(auto_2)">Down Stop<//button>
+  </body>
+</html>

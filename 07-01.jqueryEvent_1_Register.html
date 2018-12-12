@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script>
+      $(function(){
+        $(".button_1").click(function(){
+          $(".button_1").parent().next().css({"color" : "#0f0"});
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p><button class="button_1" name="button_1">Button_1</button></p>
+    <p>Contents_1</p>
+
+    <p><button class="button_2" name="button_2">Button_2</button></p>
+    <p>Contents_2</p>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      var id = "cjw1292";
+      var pw = "1234"
+
+      var user_id = prompt("Your ID : ");
+
+      if (user_id == id) {
+        var user_pw = prompt("Your PW : ");
+
+        if (user_pw == pw) {
+          document.write(user_id+" Hi~ Hello~~^^");
+        } else {
+          alert("PW fail");
+          location.reload();
+        }
+      } else {
+        alert("ID fail");
+        location.reload();
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+
+// Color Change ===============================================================
+      var color=["white", "yellow", "aqua", "purple"];
+      var i=0;
+
+      function changeColor() {
+        i++;
+
+        if(i>color.length){
+          i=0;
+        }
+
+        var bodyTag=document.getElementById("theBody");
+        bodyTag.style.backgroundColor=color[i];
+      }
+
+// ID / PW Check ==============================================================
+      var rightID="korea";
+      var rightPW="12345";
+
+      function login(id,pw){
+        if (id==rightID){
+          if (pw==rightPW){
+            document.write(id+"님 방문을 환영합니다.");
+          } else{
+            document.write("ID/PW를 다시 확인해주세요");
+          }
+        } else{
+          document.write("ID/PW를 다시 확인해주세요");
+        }
+      }
+
+      var userID=prompt("Input ID : ", "");
+      var userPW=prompt("Input PW : ", "");
+      login(userID, userPW);
+
+// Aguments ===================================================================
+      function sum() {
+        var sum=argument[0]+argument[1]+argument[2];
+        document.write(sum);
+      }
+
+//      var input=prompt("input Sum Num : ", "");
+      sum(30, 20, 10);
+
+    </script>
+  </head>
+  <body id="theBody">
+    <button onclick="changeColor();">Background Color Change</button>
+  </body>
+</html>

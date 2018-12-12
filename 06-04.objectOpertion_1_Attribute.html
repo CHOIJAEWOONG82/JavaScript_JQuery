@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script>
+      $(function(){
+        var result_1=$("#sec_1").html();
+        console.log(result_1);
+        $("#sec_1 p").html("<a href=\"#\">Text_1</a>");
+
+        var result_2=$("#sec_2").html();
+        console.log(result_2);
+        $("#sec_2 h2").text("text()");
+
+        var srcVal=$("#sec_3 img").attr("src");
+        console.log(srcVal);
+        $("sec_3 img").attr({"width" : "200", "src" : srcVal.replace("pic_2.jpg","pic_3.jpg"), "alt" : "boom_2"}).removeAttr("border");
+      });
+    </script>
+  </head>
+  <body>
+
+// html() / text() =============================================================
+    <h1><strong>Object Operation & Creation : text / html</strong></h1>
+    <section id="sec_1">
+      <h2><em>HTML()</em></h2>
+      <p>Contents_1</p>
+    </section>
+    <section id="sec_2">
+      <h2><em>TEXT()</em></h2>
+      <p>Contents_2</p>
+    </section>
+
+// attr() / removeAttr() =======================================================
+    <h1><strong>Object Operation & Creation : Attr / removeAttr</strong></h1>
+    <section id="sec_3">
+      <h2>Image Attribute</h2>
+      <p><img src="pic_2.jpg" alt="boom_1" border="2"></p>
+    </section>
+  </body>
+</html>

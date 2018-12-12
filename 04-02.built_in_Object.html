@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      var tv = new Object();
+      tv.color = "white";
+      tv.price = "500,000";
+      tv.info = function() {
+        document.write("TV Color : " + this.color,"<br>");
+        document.write("TV Price : " + this.price,"<br>");
+      }
+
+      var car = {
+        "color" : "Black",
+        "price" : "500,000,000",
+        "info" : function(){
+          document.write("CAR Color : " + this.color,"<br>");
+          document.write("CAR Prcie : " + this.price,"<br>");
+        }
+      };
+
+      document.write("<h3> Built_In_Object </h3></p>");
+      document.write("<h4> TV Object Function Call  ===================== </h4>");
+      tv.info();
+      document.write("<h4> CAR Object Function Call ==================== </h4>");
+      car.info();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

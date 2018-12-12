@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      var site = prompt("Naver, Daum, Google ? ");
+      var url;
+
+      switch (site) {
+        case "Naver" : url = "www.naver.com";
+        break;
+        case "Daum" : url = "www.daum.net";
+        break;
+        case "Google" : url = "www.google.com";
+        break;
+        default : alert("Do Not Select");
+      }
+
+      if (url) {
+        location.href="https://"+url;
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script>
+      $(function(){
+        var obj=[{"area" : "Seoul"}, {"area" : "Busan"}, {"area" : "Jinju"}]
+
+        $(obj).each(function(i,o){
+          console.log(i+":",o);
+        });
+        console.log("=========================[ End 1 ]=========================");
+
+        $.each($("#menu_2 li"), function(i,o){
+          console.log(i+":",o);
+        });
+        console.log("=========================[ End 2 ]=========================");
+
+        $.each($("#menu_2 li"), function(i){
+          console.log(i+":",$(this));
+        });
+
+        var idxNum = $("li").index($("#menu_3"));
+        console.log(idxNum);
+      });
+
+    </script>
+  </head>
+  <body>
+    <h1>Search Selector :: Each() / $.each()</h1>
+    <ul id="menu_1">
+      <li>Contents_1-1</li>
+      <li>Contents_1-2</li>
+      <li>Contents_1-3</li>
+      <li>Contents_1-4</li>
+      <li>Contents_1-5</li>
+    </ul>
+
+    <ul id="menu_2">
+      <li>Contents_2-1</li>
+      <li>Contents_2-2</li>
+      <li>Contents_2-3</li>
+      <li>Contents_2-4</li>
+      <li>Contents_2-5</li>
+    </ul>
+
+    <ul>
+      <li>Contents_3-1</li>
+      <li>Contents_3-2</li>
+      <li id="menu_3">Contents_3-3</li>
+      <li>Contents_3-4</li>
+      <li>Contents_3-5</li>
+    </ul>
+  </body>
+</html>
